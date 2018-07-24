@@ -1,0 +1,31 @@
+node JS
+
+manage multiple version of 'NVM'
+
+git clone git://github.com/creationix/nvm.git ~/nvm
+. ~/nvm/nvm.sh
+nvm install 0.8.14
+nvm use 0.6.19
+nvm alias default 0.8.14
+
+
+install on LINUX
+
+aptitude search nodejs
+
+###
+module.exports.****
+is used to expose functions to other files. so that you could import in other files and use the functionality.
+###
+module.exports.functionName = functionName
+
+
+NPM packages
+
+(will install in the project tree)
+npm install module_name 
+
+(will install in the global scope 
+example: express, mocha, azure-cli)
+npm install -g module_name
+
