@@ -29,3 +29,36 @@ npm install module_name
 example: express, mocha, azure-cli)
 npm install -g module_name
 
+
+callbacks:
+
+request/reply = one request get one reply.
+no results until all results
+either error or results
+
+getThem(param,function(err,items){
+	//check for error
+	//operate on array of items
+})
+
+Events:
+
+Publish/subscribe
+Act on results as they arrive
+Partial reults before error.
+
+var results = getThem(param);
+
+results('on',function(i){
+	//do something with this one item
+})
+
+
+results('done',function(i){
+	//do something with this one item
+})
+
+
+results('error',function(i){
+	//do something with this one item
+})
