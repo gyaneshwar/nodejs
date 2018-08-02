@@ -9,7 +9,7 @@ if(cluster.isMaster){
 	}
 
 	cluster.on('fork',function(worker){
-		console.log('master : fork event ( worker '+worker.id + ')');
+		console.log('master : fork event ( worker '+ worker.id + ')');
 	});
 
 
@@ -34,8 +34,9 @@ if(cluster.isMaster){
 	http.createServer(function(req,res){
 		res.writeHead(200);
 		count++;
-		res.end("hello world from "+cluster.worker.id + ' worker pid '+cluster.worker.process.pid);
-		if(count === 6){
+		res.end("hello world from "+cluster.worker.id + ' worker pid '+cluster.worker.process + " count : " + count);
+		console.log("hello world from "+cluster.worker.id + ' worker pid '+cluster.worker.process + " count : " + count);
+		if(count === 3){
 			cluster.worker.destroy();
 		}
 	}).listen(8000,'localhost');
