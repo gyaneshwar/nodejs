@@ -62,3 +62,7 @@ results('done',function(i){
 results('error',function(i){
 	//do something with this one item
 })
+
+
+
+EventEmitter class in nodejs

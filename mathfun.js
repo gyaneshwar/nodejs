@@ -11,5 +11,14 @@ var eventDoubler = function(v, callback){
  }
 };
 
+var eventDoublerSync = function(v){
+	if(v%2){
+		throw(new Error("Odd input"));
+	} else {
+		return (v * 2);
+	}
+};
+
 module.exports.eventDoubler = eventDoubler;
+module.exports.eventDoublerSync = eventDoublerSync;
 module.exports.foo = "bar";
